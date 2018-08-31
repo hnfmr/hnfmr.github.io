@@ -15,6 +15,7 @@
       it turned out to be not very straightforward. Notably I encountered several errors due to <code>liblapacke</code> and
       <code>liblapack</code> libraries in Ubuntu missing certain symbols. It appears upstream deprecated a number of functions
       since <code>3.5.0</code> and those deprecated functions can be turned on as options if installed manually.</p>
+    <p>I took the following steps:</p>
     <p>First of all, one should follow this guide <a href="http://ocaml.xyz/chapter/interact.html">Interacting with Owl</a>
       to begin with.</p>
     <p>Next, download the latest <code>lapack</code> <a href="http://www.netlib.org/lapack/#_lapack_version_3_8_0_2">here</a>,
@@ -29,7 +30,7 @@ cmake <span class="token punctuation">..</span> -DBUILD_DEPRECATED<span class="t
     <p>The last step will install <code>lapack</code> into <code>/usr/local</code>. Now installing <code>owl-top</code> should
       produce no errors about missing symbols from <code>liblapacke</code>.</p>
     <p><em>Additional notes</em>: since <code>libopenblas-base</code> contains both<code>libblas.so</code> and <code>liblapack.so</code>,
-      I also removed this package from Ubuntu and manully <code>OpenBLAS 0.3</code> into <code>/usr/local</code>.</p>
+      I also removed this package from Ubuntu and manully installed <code>OpenBLAS 0.3</code> into <code>/usr/local</code>.</p>
     <blockquote>
       <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
     </blockquote>
